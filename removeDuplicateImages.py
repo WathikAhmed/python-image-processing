@@ -1,6 +1,5 @@
 import os
 import os.path
-import asyncio
 import sys
 import numpy as np
 
@@ -14,13 +13,16 @@ def removeDupe():
     for file in os.listdir(sourceFolder):
         f_img = sourceFolder+"/"+file
         if file.find("(1)") == -1:
-            print("No 'duplicate' here!")
+            print("No 'duplicate' here!" + file)
         else:
-            print("Found 'duplicate' in the string.")
+            print("Found 'duplicate' in the string." + file)
+            os.remove(f_img)
+            print("Delted the duplicate file")
+        
 
 
 
-async def main():
+def main():
     removeDupe()
 
-asyncio.run(main())
+main()
