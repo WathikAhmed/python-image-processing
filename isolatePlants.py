@@ -7,12 +7,12 @@ import cv2
 import hashlib
 import random
 
-
+#Del this file soon
 
 def getGreen(img):
     # construct the argument parse and parse the arguments
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--image", help = "./images/513106.jpg")
+    ap.add_argument("-i", "--image", help = "./source/513108.jpg")
     args = vars(ap.parse_args())
     # load the image
     image = cv2.imread(img)
