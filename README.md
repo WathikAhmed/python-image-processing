@@ -5,10 +5,10 @@ A method to perform some operations on an image, in order to get an enhanced ima
 All functions are written in Python, and each file does a different image processing according to file name.
 
 ### main.py
-Runs all image cropping and processing, and outputs to "rootDir/Final".
+Runs all image cropping and processing, and outputs to "./Final".
 
 ### removeDuplicateImages.py
-Loops through "rootDir/source" and remove duplicate images.
+Loops through "./source" and remove duplicate images.
 
 ### generateCropOnly.py
 Only crops images to "cropped output folder".
