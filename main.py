@@ -10,8 +10,7 @@ import numpy as np
 
 # Assumes images are in 1944x2592 dimensions and in .jpg format
 sourceFolder = "./source"
-sourceFolderCropTopLeft = "xxx"
-sourceFolderCropBottomLeft = "xxx"
+sourceFolderCropped = "xxx"
 currentDir="xxx"
 
 
@@ -25,7 +24,7 @@ def cropTopLeft():
         # Cropping
         img = img.crop((left, upper, right, lower))
         # You should change 'test' to your preferred folder.
-        MYDIR = ("topLeftCrop")
+        MYDIR = ("sourceFolderCropped")
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -43,9 +42,9 @@ def cropTopLeft():
             print("created folder : ", MYDIR2)
         
         newDir = os.path.join(os.getcwd(), MYDIR)
-        global sourceFolderCropTopLeft
+        global sourceFolderCropped
         global currentDir
-        sourceFolderCropTopLeft = newDir
+        sourceFolderCropped = newDir
         currentDir = os.path.join(os.getcwd(), "Final")
 
         file = "cropTopLeft" + file
@@ -64,7 +63,7 @@ def cropBottomLeft():
         # Cropping
         img = img.crop((left, upper, right, lower))
         # You should change 'test' to your preferred folder.
-        MYDIR = ("cropBottomLeft")
+        MYDIR = ("sourceFolderCropped")
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -73,9 +72,9 @@ def cropBottomLeft():
             print("created folder : ", MYDIR)
 
         newDir = os.path.join(os.getcwd(), MYDIR)
-        global sourceFolderCropBottomLeft 
-        sourceFolderCropBottomLeft = newDir
-        #print(sourceFolderCropBottomLeft)
+        global sourceFolderCropped 
+        sourceFolderCropped = newDir
+        #print(sourceFolderCropped)
 
         file = "cropBottomLeft" + file
         destination = os.path.join(os.getcwd(), MYDIR, file)
@@ -87,11 +86,11 @@ def cropBottomLeft():
 
 
 
-def detectGreen(readDirr,cropSection):
+def detectGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("detectGreen" + cropSection)
+        MYDIR = ("detectGreen" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -99,7 +98,7 @@ def detectGreen(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "detectGreen" + cropSection + file
+        fileName = "detectGreen" + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -127,11 +126,11 @@ def detectGreen(readDirr,cropSection):
         cv2.imwrite(destination, target)
         cv2.imwrite(destination2, target)
 
-def increaseGreen(readDirr,cropSection):
+def increaseGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("increaseGreen" + cropSection)
+        MYDIR = ("increaseGreen" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -139,7 +138,7 @@ def increaseGreen(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "increaseGreen" + cropSection + file
+        fileName = "increaseGreen"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -170,11 +169,11 @@ def increaseGreen(readDirr,cropSection):
 
         #_____END_____#
 
-def hue(readDirr,cropSection):
+def hue(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("hue" + cropSection)
+        MYDIR = ("hue" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -182,7 +181,7 @@ def hue(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "hue" + cropSection + file
+        fileName = "hue"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
 
@@ -212,11 +211,11 @@ def hue(readDirr,cropSection):
 
         #_____END_____#
 
-def saturation(readDirr,cropSection):
+def saturation(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" + cropSection)
+        MYDIR = ("saturation" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -224,7 +223,7 @@ def saturation(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation" + cropSection + file
+        fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -252,11 +251,11 @@ def saturation(readDirr,cropSection):
 
         #_____END_____#
 
-def value(readDirr,cropSection):
+def value(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" + cropSection)
+        MYDIR = ("saturation" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -264,7 +263,7 @@ def value(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation" + cropSection + file
+        fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -292,11 +291,11 @@ def value(readDirr,cropSection):
 
         #_____END_____# 
 
-def value(readDirr,cropSection):
+def value(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" + cropSection)
+        MYDIR = ("saturation" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -304,7 +303,7 @@ def value(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation" + cropSection + file
+        fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -355,19 +354,15 @@ async def main():
     await asyncio.sleep(5)
 
     # Detect Green
-    detectGreen(sourceFolderCropTopLeft,"TopLeft")
-    detectGreen(sourceFolderCropBottomLeft,"BottomLeft")
+    detectGreen(sourceFolderCropped)
     
     # Increse Green in RGB
-    increaseGreen(sourceFolderCropTopLeft,"TopLeft")
-    increaseGreen(sourceFolderCropBottomLeft,"BottomLeft")
+    increaseGreen(sourceFolderCropped)
 
     # Increse Hue
-    hue(sourceFolderCropTopLeft,"TopLeft")
-    hue(sourceFolderCropBottomLeft,"BottomLeft")
+    hue(sourceFolderCropped)
 
     # Increse Saturation
-    saturation(sourceFolderCropTopLeft,"TopLeft")
-    saturation(sourceFolderCropBottomLeft,"BottomLeft")
+    saturation(sourceFolderCropped)
 
 asyncio.run(main())
