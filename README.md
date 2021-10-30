@@ -1,6 +1,7 @@
 # python-image-processing
 A method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it.
 
+
 ## How to use
 All functions are written in Python, and each file does a different image processing according to file name.
 Once cloning and opening the repo, create a new folder and call it "source". This is where you place images into.
