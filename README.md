@@ -6,6 +6,8 @@ All functions are written in Python, and each file does a different image proces
 Once cloning and opening the repo, create a new folder and call it "source". This is where you place images into.
 Use images from [here](https://github.com/WathikAhmed/GAN-images)
 
+If converting image types, create a new folder and call it "convert". This is where you place images into.
+
 ### main.py
 Runs all image cropping and processing, and outputs to "./Final".
 
