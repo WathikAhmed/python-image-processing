@@ -1,3 +1,4 @@
 *.jpg
 *.jfif
 *.png
+.DS_Store
