@@ -10,9 +10,8 @@ import numpy as np
 
 # Assumes images are in 1944x2592 dimensions and in .jpg format
 sourceFolder = "./source"
-sourceFolderCropTopLeft = "./topLeftCrop"
-sourceFolderCropBottomLeft = "./cropBottomLeft"
-currentDir="./Final"
+sourceFolderCropped = "xxx"
+currentDir="xxx"
 
 
 
@@ -25,7 +24,7 @@ def cropTopLeft():
         # Cropping
         img = img.crop((left, upper, right, lower))
         # You should change 'test' to your preferred folder.
-        MYDIR = ("topLeftCrop")
+        MYDIR = ("sourceFolderCropped")
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -43,9 +42,9 @@ def cropTopLeft():
             print("created folder : ", MYDIR2)
         
         newDir = os.path.join(os.getcwd(), MYDIR)
-        global sourceFolderCropTopLeft
+        global sourceFolderCropped
         global currentDir
-        sourceFolderCropTopLeft = newDir
+        sourceFolderCropped = newDir
         currentDir = os.path.join(os.getcwd(), "Final")
 
         file = "cropTopLeft" + file
@@ -64,7 +63,7 @@ def cropBottomLeft():
         # Cropping
         img = img.crop((left, upper, right, lower))
         # You should change 'test' to your preferred folder.
-        MYDIR = ("cropBottomLeft")
+        MYDIR = ("sourceFolderCropped")
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -73,9 +72,9 @@ def cropBottomLeft():
             print("created folder : ", MYDIR)
 
         newDir = os.path.join(os.getcwd(), MYDIR)
-        global sourceFolderCropBottomLeft 
-        sourceFolderCropBottomLeft = newDir
-        #print(sourceFolderCropBottomLeft)
+        global sourceFolderCropped 
+        sourceFolderCropped = newDir
+        #print(sourceFolderCropped)
 
         file = "cropBottomLeft" + file
         destination = os.path.join(os.getcwd(), MYDIR, file)
@@ -87,11 +86,11 @@ def cropBottomLeft():
 
 
 
-def detectGreen(readDirr,cropSection):
+def detectGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("detectGreen" + cropSection)
+        MYDIR = ("detectGreen" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -99,7 +98,7 @@ def detectGreen(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "detectGreen" + cropSection + file
+        fileName = "detectGreen" + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -127,11 +126,11 @@ def detectGreen(readDirr,cropSection):
         cv2.imwrite(destination, target)
         cv2.imwrite(destination2, target)
 
-def increaseGreen(readDirr,cropSection):
+def increaseGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("increaseGreen" + cropSection)
+        MYDIR = ("increaseGreen" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -139,7 +138,7 @@ def increaseGreen(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "increaseGreen" + cropSection + file
+        fileName = "increaseGreen"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -170,11 +169,11 @@ def increaseGreen(readDirr,cropSection):
 
         #_____END_____#
 
-def hue(readDirr,cropSection):
+def hue(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("hue" + cropSection)
+        MYDIR = ("hue" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -182,7 +181,7 @@ def hue(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "hue" + cropSection + file
+        fileName = "hue"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
 
@@ -212,11 +211,11 @@ def hue(readDirr,cropSection):
 
         #_____END_____#
 
-def saturation(readDirr,cropSection):
+def saturation(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" + cropSection)
+        MYDIR = ("saturation" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -224,7 +223,7 @@ def saturation(readDirr,cropSection):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation" + cropSection + file
+        fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -252,6 +251,95 @@ def saturation(readDirr,cropSection):
 
         #_____END_____#
 
+def value(readDirr):
+  
+    for file in os.listdir(readDirr):
+        f_img = readDirr+"/"+file
+        MYDIR = ("saturation" )
+        CHECK_FOLDER = os.path.isdir(MYDIR)
+
+        # If folder doesn't exist, then create it.
+        if not CHECK_FOLDER:
+            os.makedirs(MYDIR)
+            print("created folder : ", MYDIR)
+
+        fileName = "saturation"  + file
+        destination = os.path.join(os.getcwd(), MYDIR, fileName)
+        destination2 = os.path.join(currentDir, fileName)
+        #print("---------------------"+f_img)
+
+        #-----Reading the image-----------------------------------------------------
+        img = cv2.imread(f_img)
+        #cv2.imshow("img",img) 
+
+        #-----converted the values to float32 during BGR2HSV transformation to avoid negative values during saturation transformation to due uint8 (default) overflow----------------------------------- 
+        imghsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype("float32")
+        #cv2.imshow("lab",lab)
+
+        #-----splitting hsv values, adjusting the individual channels and then doing a merge-------------------------
+        (h, s, v) = cv2.split(imghsv)
+        v = v*2
+        v = np.clip(v,0,255)
+        imghsv = cv2.merge([h,s,v])
+
+        #-----converted it back to default uint8 after my hue adjustment--------------------
+        imgrgb = cv2.cvtColor(imghsv.astype("uint8"), cv2.COLOR_HSV2BGR)
+        #cv2.imshow('final', imgrgb)
+        #cv2.waitKey(0)
+        cv2.imwrite(destination, imgrgb)
+        cv2.imwrite(destination2, imgrgb)
+
+        #_____END_____# 
+
+def value(readDirr):
+  
+    for file in os.listdir(readDirr):
+        f_img = readDirr+"/"+file
+        MYDIR = ("saturation" )
+        CHECK_FOLDER = os.path.isdir(MYDIR)
+
+        # If folder doesn't exist, then create it.
+        if not CHECK_FOLDER:
+            os.makedirs(MYDIR)
+            print("created folder : ", MYDIR)
+
+        fileName = "saturation"  + file
+        destination = os.path.join(os.getcwd(), MYDIR, fileName)
+        destination2 = os.path.join(currentDir, fileName)
+        #print("---------------------"+f_img)
+
+        #-----Reading the image-----------------------------------------------------
+        img = cv2.imread(f_img)
+        #cv2.imshow("img",img) 
+
+        #-----Converting image to LAB Color model----------------------------------- 
+        lab= cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+        #cv2.imshow("lab",lab)
+
+        #-----Splitting the LAB image to different channels-------------------------
+        l, a, b = cv2.split(lab)
+        #cv2.imshow('l_channel', l)
+        #cv2.imshow('a_channel', a)
+        #cv2.imshow('b_channel', b)
+
+        #-----Applying CLAHE to L-channel-------------------------------------------
+        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+        cl = clahe.apply(l)
+        #cv2.imshow('CLAHE output', cl)
+
+        #-----Merge the CLAHE enhanced L-channel with the a and b channel-----------
+        limg = cv2.merge((cl,a,b))
+        #cv2.imshow('limg', limg)
+
+        #-----Converting image from LAB Color model to RGB model--------------------
+        imgrgb = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
+        #cv2.imshow('final', imgrgb)
+        #cv2.waitKey(0)
+        cv2.imwrite(destination, imgrgb)
+        cv2.imwrite(destination2, imgrgb)
+
+        #_____END_____# 
+
 
 
 
@@ -262,19 +350,15 @@ def saturation(readDirr,cropSection):
 async def main():
 
     # Detect Green
-    detectGreen(sourceFolderCropTopLeft,"TopLeft")
-    detectGreen(sourceFolderCropBottomLeft,"BottomLeft")
+    detectGreen(sourceFolderCropped)
     
     # Increse Green in RGB
-    increaseGreen(sourceFolderCropTopLeft,"TopLeft")
-    increaseGreen(sourceFolderCropBottomLeft,"BottomLeft")
+    increaseGreen(sourceFolderCropped)
 
     # Increse Hue
-    hue(sourceFolderCropTopLeft,"TopLeft")
-    hue(sourceFolderCropBottomLeft,"BottomLeft")
+    hue(sourceFolderCropped)
 
     # Increse Saturation
-    saturation(sourceFolderCropTopLeft,"TopLeft")
-    saturation(sourceFolderCropBottomLeft,"BottomLeft")
+    saturation(sourceFolderCropped)
 
 asyncio.run(main())
