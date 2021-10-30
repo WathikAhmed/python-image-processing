@@ -90,7 +90,7 @@ def detectGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("detectGreen" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -130,7 +130,7 @@ def increaseGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("increaseGreen" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -173,7 +173,7 @@ def hue(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("hue" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -215,7 +215,7 @@ def saturation(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -255,7 +255,7 @@ def value(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -295,7 +295,7 @@ def value(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
