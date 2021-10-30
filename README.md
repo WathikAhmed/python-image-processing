@@ -15,7 +15,7 @@ Runs all image cropping and processing, and outputs to "./Final".
 Loops through "./source" and remove duplicate images.
 
 ### generateCropOnly.py
-Only crops images to "cropped output folder".
+Only crops images to "./sourceFolderCropped".
 
 ### processCroppedImages.py
-Processes the images in "cropped output folder".
+Processes the images in "./Final".
