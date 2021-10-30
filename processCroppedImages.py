@@ -10,7 +10,7 @@ import numpy as np
 
 # Assumes images are in 1944x2592 dimensions and in .jpg format
 sourceFolder = "./source"
-sourceFolderCropped = "xxx"
+sourceFolderCropped = "./sourceFolderCropped"
 currentDir="xxx"
 
 
