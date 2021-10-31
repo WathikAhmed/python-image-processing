@@ -1,3 +1,4 @@
+# The function of this python script is to remove any duplicate files in a folder.
 import os
 import os.path
 import sys
