@@ -1,4 +1,5 @@
-# Importing Image class from PIL module
+# The function of this python script is to process the already cropped images that are in the "sourceFolderCropped" folder.
+# run using: py processCroppedImages.py
 import PIL
 import os
 import os.path
