@@ -1,4 +1,5 @@
 # The function of this python script is to remove any duplicate files in a folder.
+# run using: py removeDuplicateImages.py
 import os
 import os.path
 import sys
