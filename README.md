@@ -10,7 +10,7 @@ Use images from [here](https://github.com/WathikAhmed/GAN-images)
 If converting image types, create a new folder and call it "convert". This is where you place images into.
 
 ### main.py
-Processes all image cropping and processing, and outputs to "./Final".
+Runs all image cropping and processing, and outputs to "./Final".
 
 ### removeDuplicateImages.py
 Loops through "./source" and remove duplicate images.
