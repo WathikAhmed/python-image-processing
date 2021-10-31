@@ -8,7 +8,7 @@ from PIL import Image
 import sys
 import numpy as np
 
-# Assumes images are in 1944x2592 dimensions and in .jpg format
+# Assumes images are in .jpg format
 sourceFolderCropped = "./sourceFolderCropped"
 
 
