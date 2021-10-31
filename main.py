@@ -10,7 +10,7 @@ import numpy as np
 
 # Assumes images are in 1944x2592 dimensions and in .jpg format
 sourceFolder = "./source"
-sourceFolderCropped = "xxx"
+sourceFolderCropped = "./sourceFolderCropped"
 currentDir="xxx"
 
 
@@ -90,7 +90,7 @@ def detectGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("detectGreen" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -130,7 +130,7 @@ def increaseGreen(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("increaseGreen" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -173,7 +173,7 @@ def hue(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("hue" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -215,7 +215,7 @@ def saturation(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -255,7 +255,7 @@ def value(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -263,7 +263,7 @@ def value(readDirr):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation"  + file
+        fileName = "value"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -291,11 +291,11 @@ def value(readDirr):
 
         #_____END_____# 
 
-def value(readDirr):
+def unkown(readDirr):
   
     for file in os.listdir(readDirr):
         f_img = readDirr+"/"+file
-        MYDIR = ("saturation" )
+        MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
         # If folder doesn't exist, then create it.
@@ -303,7 +303,7 @@ def value(readDirr):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "saturation"  + file
+        fileName = "unkown"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
