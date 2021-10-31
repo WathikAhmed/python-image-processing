@@ -10,13 +10,13 @@ Use images from [here](https://github.com/WathikAhmed/GAN-images)
 If converting image types, create a new folder and call it "convert". This is where you place images into.
 
 ### main.py
-Runs all image cropping and processing, and outputs to "./Final".
+Runs all image cropping and processing functions, and outputs to "./Final".
 
 ### removeDuplicateImages.py
-Loops through "./source" and remove duplicate images.
+Loops through "./source" and removes duplicate images.
 
 ### generateCropOnly.py
-Only crops images to "./sourceFolderCropped".
+Generates cropped images and outputs to "./sourceFolderCropped".
 
 ### processCroppedImages.py
-Processes the images in "./Final".
+Processes the images in "./sourceFolderCropped" and outputs to "./Final".
