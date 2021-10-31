@@ -3,6 +3,7 @@ from PIL import Image  # Python Image Library - Image Processing
 import os
 import os.path
 
+# Assumes images are in a folder called "convert". The output will be in a folder called "converted"
 sourceFolder = "./convert"
 cwd="xxx"
 
