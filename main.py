@@ -86,10 +86,10 @@ def cropBottomLeft():
 
 
 
-def detectGreen(readDirr):
+def detectGreen():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -126,10 +126,10 @@ def detectGreen(readDirr):
         cv2.imwrite(destination, target)
         cv2.imwrite(destination2, target)
 
-def increaseGreen(readDirr):
+def increaseGreen():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -169,10 +169,10 @@ def increaseGreen(readDirr):
 
         #_____END_____#
 
-def hue(readDirr):
+def hue():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -211,10 +211,10 @@ def hue(readDirr):
 
         #_____END_____#
 
-def saturation(readDirr):
+def saturation():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -251,10 +251,10 @@ def saturation(readDirr):
 
         #_____END_____#
 
-def value(readDirr):
+def value():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -291,10 +291,10 @@ def value(readDirr):
 
         #_____END_____# 
 
-def unkown(readDirr):
+def unknown():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -303,7 +303,7 @@ def unkown(readDirr):
             os.makedirs(MYDIR)
             print("created folder : ", MYDIR)
 
-        fileName = "unkown"  + file
+        fileName = "unknown"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
         destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
@@ -354,15 +354,15 @@ async def main():
     await asyncio.sleep(5)
 
     # Detect Green
-    detectGreen(sourceFolderCropped)
+    detectGreen()
     
     # Increse Green in RGB
-    increaseGreen(sourceFolderCropped)
+    increaseGreen()
 
     # Increse Hue
-    hue(sourceFolderCropped)
+    hue()
 
     # Increse Saturation
-    saturation(sourceFolderCropped)
+    saturation()
 
 asyncio.run(main())
