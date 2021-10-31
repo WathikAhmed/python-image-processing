@@ -8,15 +8,13 @@ import sys
 import numpy as np
 
 # Assumes images are in 1944x2592 dimensions and in .jpg format
-sourceFolder = "./source"
 sourceFolderCropped = "./sourceFolderCropped"
-currentDir="xxx"
 
 
-def detectGreen(readDirr):
+def detectGreen():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -27,7 +25,6 @@ def detectGreen(readDirr):
 
         fileName = "detectGreen" + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
 
         ## Read
@@ -51,12 +48,11 @@ def detectGreen(readDirr):
         #cv2.imshow('final', target)
         #cv2.waitKey(0)
         cv2.imwrite(destination, target)
-        cv2.imwrite(destination2, target)
 
-def increaseGreen(readDirr):
+def increaseGreen():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -67,7 +63,6 @@ def increaseGreen(readDirr):
 
         fileName = "increaseGreen"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
 
         #-----Reading the image-----------------------------------------------------
@@ -92,14 +87,13 @@ def increaseGreen(readDirr):
         #cv2.imshow('final', imgbgr)
         #cv2.waitKey(0)
         cv2.imwrite(destination, imgbgr)
-        cv2.imwrite(destination2, imgbgr)
 
         #_____END_____#
 
-def hue(readDirr):
+def hue():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -110,7 +104,6 @@ def hue(readDirr):
 
         fileName = "hue"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
 
         #print("---------------------"+f_img)
 
@@ -133,15 +126,14 @@ def hue(readDirr):
         #cv2.imshow('final', imgrgb)
         #cv2.waitKey(0)
         cv2.imwrite(destination, imgrgb)
-        cv2.imwrite(destination2, imgrgb)
 
 
         #_____END_____#
 
-def saturation(readDirr):
+def saturation():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -152,7 +144,6 @@ def saturation(readDirr):
 
         fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
 
         #-----Reading the image-----------------------------------------------------
@@ -174,14 +165,13 @@ def saturation(readDirr):
         #cv2.imshow('final', imgrgb)
         #cv2.waitKey(0)
         cv2.imwrite(destination, imgrgb)
-        cv2.imwrite(destination2, imgrgb)
 
         #_____END_____#
 
-def value(readDirr):
+def value():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -192,7 +182,6 @@ def value(readDirr):
 
         fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
 
         #-----Reading the image-----------------------------------------------------
@@ -214,14 +203,13 @@ def value(readDirr):
         #cv2.imshow('final', imgrgb)
         #cv2.waitKey(0)
         cv2.imwrite(destination, imgrgb)
-        cv2.imwrite(destination2, imgrgb)
 
         #_____END_____# 
 
-def value(readDirr):
+def value():
   
-    for file in os.listdir(readDirr):
-        f_img = readDirr+"/"+file
+    for file in os.listdir(sourceFolderCropped):
+        f_img = sourceFolderCropped+"/"+file
         MYDIR = ("Final" )
         CHECK_FOLDER = os.path.isdir(MYDIR)
 
@@ -232,7 +220,6 @@ def value(readDirr):
 
         fileName = "saturation"  + file
         destination = os.path.join(os.getcwd(), MYDIR, fileName)
-        destination2 = os.path.join(currentDir, fileName)
         #print("---------------------"+f_img)
 
         #-----Reading the image-----------------------------------------------------
@@ -263,7 +250,6 @@ def value(readDirr):
         #cv2.imshow('final', imgrgb)
         #cv2.waitKey(0)
         cv2.imwrite(destination, imgrgb)
-        cv2.imwrite(destination2, imgrgb)
 
         #_____END_____# 
 
@@ -272,15 +258,15 @@ def value(readDirr):
 
 
 # Detect Green
-detectGreen(sourceFolderCropped)
+detectGreen()
     
 # Increse Green in RGB
-increaseGreen(sourceFolderCropped)
+increaseGreen()
 
 # Increse Hue
-hue(sourceFolderCropped)
+hue()
 
 # Increse Saturation
-saturation(sourceFolderCropped)
+saturation()
 
 print("Done!")
