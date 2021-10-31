@@ -1,4 +1,5 @@
-# Importing Image class from PIL module
+# The function of this python script is to crop and process images -> output will be in the "Final" folder.
+# run using: py main.py
 import PIL
 import os
 import os.path
