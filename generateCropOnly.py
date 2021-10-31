@@ -1,4 +1,5 @@
 # The function of this python script is to generate cropped images as output.
+# run using: py generateCropOnly.py
 import PIL
 import os
 import os.path
