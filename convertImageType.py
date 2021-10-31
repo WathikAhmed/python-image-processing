@@ -1,3 +1,5 @@
+# The function of this python script is to convert image file types.
+# run using: py convertImageType.py
 import PIL
 from PIL import Image  # Python Image Library - Image Processing
 import os
