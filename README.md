@@ -2,6 +2,7 @@
 A method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it.
 
 >[Main project](https://github.com/NVlabs/stylegan2)
+
 >[Gan Image Store](https://github.com/WathikAhmed/GAN-images)
 
 
